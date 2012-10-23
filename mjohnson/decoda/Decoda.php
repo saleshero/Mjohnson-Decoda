@@ -321,6 +321,9 @@ class Decoda {
 		$this->addFilter(new \mjohnson\decoda\filters\QuoteFilter());
 		$this->addFilter(new \mjohnson\decoda\filters\ListFilter());
 
+        // Add variable filter
+		$this->addFilter(new \mjohnson\decoda\filters\VariableFilter());
+
 		$this->addHook(new \mjohnson\decoda\hooks\CensorHook());
 		$this->addHook(new \mjohnson\decoda\hooks\ClickableHook());
 
