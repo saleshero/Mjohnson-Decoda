@@ -112,7 +112,7 @@ class VariableFilter extends FilterAbstract {
 
 		// Return an invalid variable name
         if ( !filter_var($var, FILTER_VALIDATE_REGEXP,
-                array('options' => array('regexp' => '/^[a-z][a-z0-9_]+$/'))) )
+                array('options' => array('regexp' => '/^[a-z][a-z0-9_]+$/i'))) )
         {
             $varTag = $tag['tag'];
             return '[' . $varTag . ']' . $content . '[/' . $varTag . ']';
