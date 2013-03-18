@@ -388,6 +388,10 @@ class Decoda {
 			return $this->_filters[$filter];
 		}
 
+		if (isset($this->_filters['mjohnson\decoda\filters\\' . $filter])) {
+			return $this->_filters['mjohnson\decoda\filters\\' . $filter];
+		}
+
 		throw new Exception(sprintf('Filter %s does not exist.', $filter));
 	}
 
